@@ -8,32 +8,40 @@ public class Principal {
 
         System.out.println("----------------------");
         System.out.print("1º numerador: ");
-        int numerador1 = teclado.nextInt();
+        int num1 = teclado.nextInt();
         System.out.print("1º denominador: ");
-        int denominador1 = teclado.nextInt();
+        int den1 = teclado.nextInt();
         System.out.print("2º numerador: ");
-        int numerador2 = teclado.nextInt();
+        int num2 = teclado.nextInt();
         System.out.print("2º denominador: ");
-        int denominador2 = teclado.nextInt();
+        int den2 = teclado.nextInt();
 
         teclado.close();
 
-        Racional r1 = new Racional(numerador1, denominador1);
-        Racional r2 = new Racional(numerador2, denominador2);
+        Racional r1 = new Racional(num1, den1);
+        Racional r2 = new Racional(num2, den2);
 
         System.out.println("----------------------");
 
         Racional somar = Racional.somar(r1, r2);
-        System.out.println("SOMA: " + somar + " = " + somar.valorDouble());
+        System.out.print("SOMA: " + somar.getNumerador());
+        System.out.print("/" + somar.getDenominador());
+        System.out.print(" = " + somar.valorDouble(somar) + "\n");
 
         Racional subtrair = Racional.subtrair(r1, r2);
-        System.out.println("SUBTRACAO: " + subtrair + " = " + subtrair.valorDouble());
+        System.out.print("SUBTRACAO: " + subtrair.getNumerador());
+        System.out.print("/" + subtrair.getDenominador());
+        System.out.print(" = " + subtrair.valorDouble(subtrair) + "\n");
 
         Racional multiplicar = Racional.multiplicar(r1, r2);
-        System.out.println("MULTIPLICACAO: " + multiplicar + " = " + multiplicar.valorDouble());
+        System.out.print("MULTIPLICACAO: " +  multiplicar.getNumerador());
+        System.out.print("/" + multiplicar.getDenominador());
+        System.out.print(" = " + multiplicar.valorDouble(multiplicar) + "\n");
 
         Racional dividir = Racional.dividir(r1, r2);
-        System.out.println("DIVISAO: " + dividir + " = " + dividir.valorDouble());
+        System.out.print("DIVISAO: " +  dividir.getNumerador());
+        System.out.print("/" + dividir.getDenominador());
+        System.out.print(" = " + dividir.valorDouble(dividir) + "\n");
 
         System.out.println("----------------------");
    
